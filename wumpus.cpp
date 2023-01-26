@@ -1,0 +1,70 @@
+// wumpus.cpp
+// constructors, destructors, and functions for Wumpus class
+///////////////////////
+
+#include "wumpus.h"
+
+
+
+// Constructors
+Wumpus::Wumpus() {
+	wumpusHealth = 1;
+	wumpusTiredness = 0;
+	wumpusRoom = 0;
+}
+
+// Destructor
+Wumpus::~Wumpus() {
+	wumpusHealth = 0;
+}
+
+//////////////////////////////////////////
+// *wumpusTiredness* setter
+//////////////////////////////////////////
+void Wumpus::setWumpusTiredness( int value) {
+	wumpusTiredness = value;
+}
+
+//////////////////////////////////////////
+// *wumpusHealth* getter
+//////////////////////////////////////////
+int Wumpus::getWumpusHealth() {
+	return wumpusHealth;
+}
+
+//////////////////////////////////////////
+// *wumpusTiredness* getter
+//////////////////////////////////////////
+int Wumpus::getWumpusTiredness() {
+	return wumpusTiredness;
+}
+
+//////////////////////////////////////////
+// *wumpusRoom* getter
+//////////////////////////////////////////
+int Wumpus::getRoom() {
+	return wumpusRoom;
+}
+
+//////////////////////////////////////////
+// *wumpusRoom* updater
+//////////////////////////////////////////
+void Wumpus::changeRoom(int room) {
+	wumpusRoom = room;	
+}
+
+//////////////////////////////////////////
+// *wumpusTiredness* updater
+//////////////////////////////////////////
+void Wumpus::changeWumpusTiredness() {
+	if (wumpusTiredness > 0) {
+		wumpusTiredness--;
+	}
+}
+
+//////////////////////////////////////////
+// *wumpusHealth* updater
+//////////////////////////////////////////
+void Wumpus::wumpusDead() {
+	wumpusHealth = 0;
+}
